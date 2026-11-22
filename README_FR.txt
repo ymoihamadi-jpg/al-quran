@@ -1,51 +1,58 @@
-AL-QURAN — VERSION 3 (PWA / BASE ANDROID)
+AL-QURAN — VERSION 2 (PWA / BASE ANDROID)
 =========================================
 
-Cette archive contient le code source d'une application web progressive (PWA).
-Ce n'est PAS encore un APK Android compilé ou signé.
+Cette archive contient le code source d'une application web progressive (PWA)
+conçue pour Android. Ce n'est PAS encore un APK compilé ou signé.
 
-AMÉLIORATIONS DE LA VERSION 3
-- Interface mobile retravaillée : vert profond, or, cartes, navigation et mode sombre.
-- Liste dynamique des 114 sourates depuis AlQuran Cloud.
+FONCTIONS DE CETTE VERSION
+- Interface française, thème clair/sombre et navigation mobile.
+- Liste des 114 sourates.
 - Texte arabe Uthmani et traduction française Muhammad Hamidullah.
-- Choix de cinq récitateurs arabes via AlQuran Cloud.
-- Lecture audio arabe verset par verset et téléchargement des audios d'une sourate.
-- Lecture française par synthèse vocale, avec réglage de voix grave et masculine si le moteur Android fournit une voix française masculine.
-- 12 fiches de hadiths avec références de recueils.
-- 11 invocations avec références coraniques ou de hadiths.
-- Tasbih numérique avec compteur conservé sur l'appareil.
-- Mise en cache de l'interface et stockage local des textes, audios et favoris de versets.
-- Recherche parmi les sourates, reprise de la dernière lecture et favoris par verset.
+- Choix de plusieurs récitateurs arabes via AlQuran Cloud.
+- Lecture audio arabe verset par verset.
+- Téléchargement des fichiers audio arabes d'une sourate dans IndexedDB.
+- Bouton FR : lecture vocale de la traduction via la synthèse vocale Android / navigateur.
+- Hadiths avec références de recueils.
+- Invocations tirées du Coran et de la Sunna, avec références.
+- Tasbih numérique avec compteur mémorisé sur l'appareil.
+- Mise en cache de l'interface et des textes/fichiers demandés.
 
-IMPORTANT — VOIX FRANÇAISE
-La voix française est générée par le moteur de synthèse vocale installé sur le téléphone.
-L'application règle une tonalité plus grave et cherche une voix française masculine quand
-le système en propose une. Les noms et le genre des voix disponibles dépendent d'Android.
-Ce n'est PAS un enregistrement humain fourni avec l'application, ni un fichier MP3.
-Pour une vraie voix humaine enregistrée, il faudra obtenir des fichiers audio de traduction
-française dont les droits de diffusion et de redistribution sont explicitement autorisés.
+IMPORTANT — AUDIO FRANÇAIS
+La voix française est la synthèse vocale du téléphone (SpeechSynthesis), et non un
+fichier de récitation français fourni avec l'application. La disponibilité et la
+qualité dépendent du moteur vocal installé sur Android. Installer une voix française
+dans les paramètres de synthèse vocale du téléphone peut être nécessaire. Le bouton
+FR ne crée pas un fichier audio MP3 téléchargeable. Le téléchargement proposé dans
+cette version concerne les récitations arabes.
 
-CORAN COMPLET ET HORS LIGNE
-La liste contient les 114 sourates. Les textes et audios de chaque sourate sont chargés
-à la demande. La connexion est nécessaire au premier chargement de chaque contenu.
-Le texte et les récitations arabes téléchargés sont conservés dans IndexedDB. La voix
-française dépend du moteur vocal Android et n'est pas garantie hors ligne.
+HORS LIGNE
+- La première connexion Internet est nécessaire pour charger les données.
+- Le texte et les récitations arabes doivent être chargés/téléchargés avant l'usage hors ligne.
+- Les voix françaises dépendent du moteur vocal Android et ne sont pas garanties hors ligne.
+- Les téléchargements sont conservés dans IndexedDB du navigateur/PWA. Ne pas effacer
+  les données du navigateur si l'on souhaite les conserver.
 
 SOURCES ET DROITS
 - Texte arabe : Tanzil Project, texte Uthmani. https://tanzil.net
 - Traduction : Muhammad Hamidullah via AlQuran Cloud. Vérifier les conditions de
   redistribution et d'utilisation commerciale avant publication.
-- Récitations : AlQuran Cloud / Islamic Network CDN. Les enregistrements peuvent rester
-  soumis aux droits des récitateurs et ayants droit. Obtenir les autorisations nécessaires.
-- Hadiths et invocations : références affichées dans l'application. Vérifier les traductions,
-  numérotations et éditions avant publication définitive ou usage d'étude religieuse.
+- Récitations : AlQuran Cloud / Islamic Network CDN. Les enregistrements peuvent
+  rester soumis aux droits des récitateurs et ayants droit. Obtenir les autorisations
+  nécessaires avant de redistribuer les fichiers dans une application commerciale.
+- Hadiths : références indiquées à côté de chaque texte. Vérifier les traductions,
+  numérotations et éditions avant publication définitive.
 
 PUBLICITÉ
-Aucun identifiant publicitaire actif n'est inclus. L'emplacement de l'accueil est décoratif.
-Pour une application Android, configurer AdMob avec de vrais identifiants, les consentements
-et une politique de confidentialité complète. Ne pas afficher d'annonce pendant la lecture.
+Aucun identifiant publicitaire actif n'est inclus. L'espace d'accueil est un simple
+emplacement réservé. Pour une application Android, utiliser AdMob et ses identifiants
+réels après configuration du compte, consentement et politique de confidentialité.
+Ne pas afficher d'annonce pendant la lecture, l'écoute ou les invocations.
+
+INSTALLATION DE TEST
+Héberger le dossier sur un domaine HTTPS, puis ouvrir l'adresse dans Chrome Android.
+Utiliser le menu Chrome > Installer l'application / Ajouter à l'écran d'accueil.
 
 COMPILATION APK
-Cette archive n'est pas un APK. Pour produire un APK, il faut empaqueter la PWA avec
-Bubblewrap/TWA ou Capacitor, puis compiler et signer avec Android SDK. La version hébergée
-sur un domaine HTTPS peut servir à tester la PWA et à préparer un paquet Android.
+Pour obtenir un APK Android, empaqueter cette PWA avec Bubblewrap (TWA) ou Capacitor,
+puis compiler et signer avec Android SDK / Android Studio. Le SDK Android n'est pas
+présent dans cet environnement : aucun APK n'a été généré dans cette archive.
